@@ -87,9 +87,9 @@ FIB_TOLERANCE: float = 0.005      # 0.5% de tolerancia para "estar en el nivel"
 class RiskConfig:
     """Configuración de gestión de riesgo."""
     # Tamaño por score
-    size_score_perfect: float = 0.02   # 2% capital (score 9-10)
-    size_score_good: float = 0.015     # 1.5% capital (score 7-8)
-    size_score_weak: float = 0.01      # 1% capital (score 5-6)
+    size_score_perfect: float = 0.02   # 25% capital (score 9-10)
+    size_score_good: float = 0.015     # 18% capital (score 7-8)
+    size_score_weak: float = 0.01      # 10% capital (score 5-6)
 
     # Stops y targets
     max_sl_pct: float = 0.015          # SL máximo 1.5% desde entry
@@ -100,9 +100,9 @@ class RiskConfig:
 
     # Límites operativos
     max_concurrent_positions: int = 4
-    daily_drawdown_limit: float = 0.05   # 5% para parar el día
-    weekly_drawdown_limit: float = 0.10  # 10% para revisar params
-    leverage: int = 8                   # Apalancamiento por defecto
+    daily_drawdown_limit: float = 0.05   # 15% para parar el día
+    weekly_drawdown_limit: float = 0.10  # 20% para revisar params
+    leverage: int = 10                   # Apalancamiento por defecto
 
     # Cooldown
     cooldown_after_loss_seconds: int = 1800  # 30 min tras stop loss
@@ -119,7 +119,7 @@ SCORE_MINOR_PENALTY: float = 0.5      # -0.5 por contradicción menor
 SCORE_CRITICAL_PENALTY: float = 1.0   # -1.0 por filtro crítico fallido
 CRITICAL_FILTERS: Tuple[int, ...] = (1, 2, 4, 7)  # Filtros críticos
 
-SCORE_MIN_TO_TRADE: float = 5.0
+SCORE_MIN_TO_TRADE: float = 5.5
 SCORE_FULL_SIZE: float = 7.0
 SCORE_PERFECT: float = 9.0
 
