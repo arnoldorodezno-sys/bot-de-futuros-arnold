@@ -87,9 +87,9 @@ FIB_TOLERANCE: float = 0.005      # 0.5% de tolerancia para "estar en el nivel"
 class RiskConfig:
     """Configuración de gestión de riesgo."""
     # Tamaño por score
-    size_score_perfect: float = 0.02   # 25% capital (score 9-10)
-    size_score_good: float = 0.015     # 18% capital (score 7-8)
-    size_score_weak: float = 0.01      # 10% capital (score 5-6)
+    size_score_perfect: float = 0.25   # 25% capital (score 9-10)
+    size_score_good: float = 0.18    # 18% capital (score 7-8)
+    size_score_weak: float = 0.10     # 10% capital (score 5-6)
 
     # Stops y targets
     max_sl_pct: float = 0.015          # SL máximo 1.5% desde entry
@@ -100,8 +100,8 @@ class RiskConfig:
 
     # Límites operativos
     max_concurrent_positions: int = 4
-    daily_drawdown_limit: float = 0.05   # 15% para parar el día
-    weekly_drawdown_limit: float = 0.10  # 20% para revisar params
+    daily_drawdown_limit: float = 0.15   # 15% para parar el día
+    weekly_drawdown_limit: float = 0.20  # 20% para revisar params
     leverage: int = 10                   # Apalancamiento por defecto
 
     # Cooldown
