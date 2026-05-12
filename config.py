@@ -119,7 +119,7 @@ SCORE_MINOR_PENALTY: float = 0.5      # -0.5 por contradicción menor
 SCORE_CRITICAL_PENALTY: float = 1.0   # -1.0 por filtro crítico fallido
 CRITICAL_FILTERS: Tuple[int, ...] = (1, 2, 4, 7)  # Filtros críticos
 
-SCORE_MIN_TO_TRADE: float = 5
+SCORE_MIN_TO_TRADE: float = 6.0
 SCORE_FULL_SIZE: float = 7.0
 SCORE_PERFECT: float = 9.0
 
